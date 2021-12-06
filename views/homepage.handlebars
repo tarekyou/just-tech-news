@@ -4,7 +4,9 @@
         {{!-- {{#each posts}} --}}
         {{#each posts as |post|}}
         <li>
-            <article class="post">
+            {{!-- all we need is the > character, followed by the name of the partial file and the object we'll pass to the partial. --}}
+            {{> post-info post }}
+            {{!-- <article class="post">
                 <div class="title">
                     <a href="{{post_url}}" target="_blank">{{title}}</a>
                      <span>({{post_url}})</span>
@@ -15,7 +17,7 @@
                     |
                     <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
                 </div>
-            </article>
+            </article> --}}
         </li>
         {{/each}}
     </ol>
