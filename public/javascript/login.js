@@ -21,11 +21,13 @@ async function signupFormHandler(event) {
         // console.log(response);
     
               // check the response status
-        if (response.ok) {
-            console.log('success');
-        } else {
-            alert(response.statusText);
-      }  }
+              if (response.ok) {
+                // document.location.replace('/');
+                document.location.replace('/dashboard/');
+              } else {
+                alert(response.statusText);
+              }
+      }
 }
 
 //   if (username && email && password) {
@@ -61,7 +63,8 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        // document.location.replace('/');
+        document.location.replace('/dashboard/');
       } else {
         alert(response.statusText);
       }
